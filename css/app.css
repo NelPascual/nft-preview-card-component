@@ -1,0 +1,161 @@
+:root {
+    --cyan: #00fff7;
+    --soft-blue: #8bacda;
+    --very-dark-blue-cardBG: #14253d;
+    --very-dark-blue-line: #2f415b;
+    --very-dark-blue-mainBG: #0d192b;
+    --white: #ffffff;
+}
+
+/* ++++++++++++++ GLOBAL STYLES ++++++++++++++ */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-dark-blue-mainBG);
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 2.5rem 0 0 0;
+}
+
+img {
+    border-radius: 1rem;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+p {
+    color: var(--soft-blue);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+p,
+.ethereum,
+.footer {
+    padding: 1.5rem 0 0 0;
+}
+
+.container {
+    max-width: 102rem;
+    margin: auto;
+}
+
+/* ++++++++++++++ NFT ++++++++++++++ */
+
+.component {
+    background-color: var(--very-dark-blue-cardBG);
+    border-radius: 1.5rem;
+    height: 54.3rem;
+    padding: 2.5rem 2.6rem;
+    width: 32.8rem;
+}
+
+.img-component {
+    border-radius: 1rem;
+    position: relative;
+}
+
+.img-component-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00fff755;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.img-component:hover > .img-component-hover {
+    opacity: 1;
+}
+
+.ethereum {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4rem;
+}
+
+.num,
+.days {
+    display: flex;
+    align-items: center;
+    column-gap: .7rem;
+}
+
+.text-component p,
+.ethereum-text,
+.days p {
+    font-size: 1.6rem;
+}
+
+.ethereum p,
+.footer p {
+    padding-top: 0;
+}
+
+.ethereum-text {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto 80%;
+    align-items: center;
+    border-top: 1px solid var(--very-dark-blue-line);
+    column-gap: 1.6rem;
+    margin-top: 1.5rem;
+}
+
+.footer img {
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    height: 3.4rem;
+    width: 3.4rem;
+}
+
+.footer p {
+    font-size: 1.5rem;
+}
